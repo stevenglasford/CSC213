@@ -1,0 +1,12 @@
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\LINQApp\LINQApp\bin\Debug\LINQApp.exe.config
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\LINQApp\LINQApp\bin\Debug\LINQApp.exe
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\LINQApp\LINQApp\bin\Debug\LINQApp.pdb
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\LINQApp\LINQApp\obj\Debug\LINQApp.csprojAssemblyReference.cache
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\LINQApp\LINQApp\obj\Debug\LINQApp.Properties.Resources.resources
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\LINQApp\LINQApp\obj\Debug\LINQApp.csproj.GenerateResource.cache
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\LINQApp\LINQApp\obj\Debug\LINQApp.csproj.CoreCompileInputs.cache
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\LINQApp\LINQApp\obj\Debug\LINQApp.exe
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\LINQApp\LINQApp\obj\Debug\LINQApp.pdb
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\LINQApp\LINQApp\obj\Debug\LINQApp.Form1.resources
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\LINQApp\LINQApp\obj\Debug\LINQApp.Form2.resources
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\LINQApp\LINQApp\obj\Debug\LINQApp.Form3.resources

@@ -1,0 +1,10 @@
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\StudentApp\StudentApp\bin\Debug\StudentApp.exe.config
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\StudentApp\StudentApp\bin\Debug\StudentApp.exe
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\StudentApp\StudentApp\bin\Debug\StudentApp.pdb
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\StudentApp\StudentApp\obj\Debug\StudentApp.csprojAssemblyReference.cache
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\StudentApp\StudentApp\obj\Debug\StudentApp.Properties.Resources.resources
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\StudentApp\StudentApp\obj\Debug\StudentApp.csproj.GenerateResource.cache
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\StudentApp\StudentApp\obj\Debug\StudentApp.csproj.CoreCompileInputs.cache
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\StudentApp\StudentApp\obj\Debug\StudentApp.exe
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\StudentApp\StudentApp\obj\Debug\StudentApp.pdb
+C:\Users\steven.glasford.AD.000\OneDrive - North Dakota University System\9-10-2019\StudentApp\StudentApp\obj\Debug\StudentApp.Form1.resources

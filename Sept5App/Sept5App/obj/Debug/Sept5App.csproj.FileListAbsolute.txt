@@ -1,0 +1,10 @@
+C:\Users\steven.glasford.AD\Documents\Sept5App\Sept5App\bin\Debug\Sept5App.exe.config
+C:\Users\steven.glasford.AD\Documents\Sept5App\Sept5App\bin\Debug\Sept5App.exe
+C:\Users\steven.glasford.AD\Documents\Sept5App\Sept5App\bin\Debug\Sept5App.pdb
+C:\Users\steven.glasford.AD\Documents\Sept5App\Sept5App\obj\Debug\Sept5App.csprojAssemblyReference.cache
+C:\Users\steven.glasford.AD\Documents\Sept5App\Sept5App\obj\Debug\Sept5App.Form1.resources
+C:\Users\steven.glasford.AD\Documents\Sept5App\Sept5App\obj\Debug\Sept5App.Properties.Resources.resources
+C:\Users\steven.glasford.AD\Documents\Sept5App\Sept5App\obj\Debug\Sept5App.csproj.GenerateResource.cache
+C:\Users\steven.glasford.AD\Documents\Sept5App\Sept5App\obj\Debug\Sept5App.csproj.CoreCompileInputs.cache
+C:\Users\steven.glasford.AD\Documents\Sept5App\Sept5App\obj\Debug\Sept5App.exe
+C:\Users\steven.glasford.AD\Documents\Sept5App\Sept5App\obj\Debug\Sept5App.pdb

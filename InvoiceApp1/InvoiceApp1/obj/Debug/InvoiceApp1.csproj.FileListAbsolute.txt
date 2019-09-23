@@ -1,0 +1,10 @@
+C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\InvoiceApp1\InvoiceApp1\bin\Debug\InvoiceApp1.exe.config
+C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\InvoiceApp1\InvoiceApp1\bin\Debug\InvoiceApp1.exe
+C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\InvoiceApp1\InvoiceApp1\bin\Debug\InvoiceApp1.pdb
+C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\InvoiceApp1\InvoiceApp1\obj\Debug\InvoiceApp1.csprojAssemblyReference.cache
+C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\InvoiceApp1\InvoiceApp1\obj\Debug\InvoiceApp1.Properties.Resources.resources
+C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\InvoiceApp1\InvoiceApp1\obj\Debug\InvoiceApp1.csproj.GenerateResource.cache
+C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\InvoiceApp1\InvoiceApp1\obj\Debug\InvoiceApp1.csproj.CoreCompileInputs.cache
+C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\InvoiceApp1\InvoiceApp1\obj\Debug\InvoiceApp1.exe
+C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\InvoiceApp1\InvoiceApp1\obj\Debug\InvoiceApp1.pdb
+C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\InvoiceApp1\InvoiceApp1\obj\Debug\InvoiceApp1.Form1.resources
