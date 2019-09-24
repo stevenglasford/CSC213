@@ -36,6 +36,11 @@ namespace EmplApp1
             myEmplList.Add(mySalEmpl);
             myEmplList.Add(myComEmpl);
             myEmplList.Add(myBasePlusEmpl);
+
+            foreach(Employee x in myEmplList)
+            {
+                listBox1.Items.Add(x.ToString());
+            }
         }
     }
 }
