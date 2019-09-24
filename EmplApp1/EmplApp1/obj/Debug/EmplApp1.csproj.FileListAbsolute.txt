@@ -1,0 +1,8 @@
+C:\Users\steven.glasford\OneDrive - North Dakota University System\EmplApp1\EmplApp1\bin\Debug\EmplApp1.exe.config
+C:\Users\steven.glasford\OneDrive - North Dakota University System\EmplApp1\EmplApp1\bin\Debug\EmplApp1.exe
+C:\Users\steven.glasford\OneDrive - North Dakota University System\EmplApp1\EmplApp1\bin\Debug\EmplApp1.pdb
+C:\Users\steven.glasford\OneDrive - North Dakota University System\EmplApp1\EmplApp1\obj\Debug\EmplApp1.Properties.Resources.resources
+C:\Users\steven.glasford\OneDrive - North Dakota University System\EmplApp1\EmplApp1\obj\Debug\EmplApp1.csproj.GenerateResource.cache
+C:\Users\steven.glasford\OneDrive - North Dakota University System\EmplApp1\EmplApp1\obj\Debug\EmplApp1.csproj.CoreCompileInputs.cache
+C:\Users\steven.glasford\OneDrive - North Dakota University System\EmplApp1\EmplApp1\obj\Debug\EmplApp1.exe
+C:\Users\steven.glasford\OneDrive - North Dakota University System\EmplApp1\EmplApp1\obj\Debug\EmplApp1.pdb
