@@ -27,5 +27,18 @@ namespace Glasford_926
                 Fee = fee;
             }
         }
+
+        public override void Credit(decimal dollas)
+        {
+            if (Balance - fee - dollas >= 0.0m)
+            {
+                
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("You too poor " +
+                    "to afford a fee");
+            }
+        }
     }
 }

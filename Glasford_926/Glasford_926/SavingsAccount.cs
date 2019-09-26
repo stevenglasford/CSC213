@@ -30,7 +30,7 @@ namespace Glasford_926
 
         public decimal CalculateInterest()
         {
-            return (rate * Balance);
+            return ((rate/100) * Balance);
         }
 
     }

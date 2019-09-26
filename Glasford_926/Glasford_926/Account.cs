@@ -35,12 +35,12 @@ namespace Glasford_926
             }
         }
 
-        public void Credit(decimal addMoney)
+        public virtual void Credit(decimal addMoney)
         {
             balance += addMoney;
         }
 
-        public void Debit(decimal removeMoney)
+        public virtual void Debit(decimal removeMoney)
         {
             if (removeMoney > balance)
             {
