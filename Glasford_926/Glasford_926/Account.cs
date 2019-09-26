@@ -35,5 +35,23 @@ namespace Glasford_926
             }
         }
 
+        public void Credit(decimal addMoney)
+        {
+            balance += addMoney;
+        }
+
+        public void Debit(decimal removeMoney)
+        {
+            if (removeMoney > balance)
+            {
+                throw new ArgumentOutOfRangeException("Cockeater, you" +
+                    " too broke. You have $" + balance + " and you tried" +
+                    " to spend $" + removeMoney);
+            }
+            else
+            {
+                balance -= removeMoney;
+            }
+        }
     }
 }
