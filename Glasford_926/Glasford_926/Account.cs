@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Glasford_926
 {
-    class Account
+    public class Account
     {
         private decimal balance = 0;
 

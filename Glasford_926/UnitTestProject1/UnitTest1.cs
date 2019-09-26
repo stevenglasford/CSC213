@@ -9,8 +9,9 @@ namespace UnitTestProject1
     {
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void TestMethod1()
+        public void TestNegativeBalance()
         {
+            Account a = new Account(-1);
         }
     }
 }
