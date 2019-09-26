@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Glasford_926
 {
-    class ChequeingAccount
+    class ChequeingAccount : Account
     {
     }
 }

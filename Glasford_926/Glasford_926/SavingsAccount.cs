@@ -33,6 +33,5 @@ namespace Glasford_926
             return (rate * Balance);
         }
 
-
     }
 }
