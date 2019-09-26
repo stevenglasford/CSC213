@@ -8,5 +8,24 @@ namespace Glasford_926
 {
     class ChequeingAccount : Account
     {
+        private decimal fee = 0;
+
+        public ChequeingAccount(decimal initialBalance, decimal fee) 
+            : base(initialBalance)
+        {
+            this.Fee = fee;
+        }
+
+        decimal Fee
+        {
+            get
+            {
+                return fee;
+            }
+            set
+            {
+                Fee = fee;
+            }
+        }
     }
 }
