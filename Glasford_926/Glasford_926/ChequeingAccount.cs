@@ -32,13 +32,28 @@ namespace Glasford_926
         {
             if (Balance - fee - dollas >= 0.0m)
             {
-                
+                base.Credit(dollas + fee);
             }
             else
             {
                 throw new ArgumentOutOfRangeException("You too poor " +
-                    "to afford a fee");
+                    "to afford a fee of: $" + fee);
             }
         }
+
+        public override void Debit(decimal green)
+        {
+            if (Balance >= (green + fee) )
+            {
+                base.Debit(green + fee);
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("You too poor " +
+                    "to afford a fee of: $" + fee);
+            }
+        }
+
+
     }
 }
