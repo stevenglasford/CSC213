@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Glasford_926;
 
 namespace UnitTestProject1
 {
@@ -7,6 +8,7 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void TestMethod1()
         {
         }
