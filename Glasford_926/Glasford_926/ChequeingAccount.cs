@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Glasford_926
 {
-    class ChequeingAccount : Account
+    public class ChequeingAccount : Account
     {
         private decimal fee = 0;
 

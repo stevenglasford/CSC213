@@ -28,5 +28,21 @@ namespace UnitTestProject1
             a.Credit(1.0m);
             Assert.AreEqual(a.Balance, 2.0m);
         }
+
+        [TestMethod]
+        public void TestAccountDebit()
+        {
+            Account a = new Account(1.0m);
+            a.Debit(1.0m);
+            Assert.AreEqual(a.Balance, 0.0m);
+        }
+
+        [TestMethod]
+        public void TestSavingsRate()
+        {
+            SavingsAccount a = new SavingsAccount(1.0m,1.0);
+            a.Debit(1.0m);
+            Assert.AreEqual(a.Balance, 0.0m);
+        }
     }
 }

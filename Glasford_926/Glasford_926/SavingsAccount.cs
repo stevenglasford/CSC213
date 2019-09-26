@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Glasford_926
 {
-    class SavingsAccount : Account
+    public class SavingsAccount : Account
     {
         private decimal rate;
 
