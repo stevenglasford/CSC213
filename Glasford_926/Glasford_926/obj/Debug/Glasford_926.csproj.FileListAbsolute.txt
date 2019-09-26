@@ -1,0 +1,9 @@
+C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\bin\Debug\Glasford_926.exe.config
+C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\bin\Debug\Glasford_926.exe
+C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\bin\Debug\Glasford_926.pdb
+C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\obj\Debug\Glasford_926.csprojAssemblyReference.cache
+C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\obj\Debug\Glasford_926.Properties.Resources.resources
+C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\obj\Debug\Glasford_926.csproj.GenerateResource.cache
+C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\obj\Debug\Glasford_926.csproj.CoreCompileInputs.cache
+C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\obj\Debug\Glasford_926.exe
+C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\obj\Debug\Glasford_926.pdb

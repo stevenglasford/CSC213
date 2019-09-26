@@ -12,7 +12,7 @@ namespace Glasford_926
 
         public Account(decimal initialBalance)
         {
-            Balance = balance;
+            Balance = initialBalance;
         }
 
         public decimal Balance
