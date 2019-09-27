@@ -34,15 +34,15 @@ namespace UnitTestProject1
         {
             Account a = new Account(1.0m);
             a.Debit(1.0m);
-            Assert.AreEqual(a.Balance, 0.0m);
+            Assert.AreEqual(a.Balance, 150.0m);
         }
 
         [TestMethod]
-        public void TestSavingsRate()
+        public void TestSavingsCalculateInterest()
         {
-            SavingsAccount a = new SavingsAccount(1.0m,1.0);
-            a.Debit(1.0m);
-            Assert.AreEqual(a.Balance, 0.0m);
+            SavingsAccount a = new SavingsAccount(10.0m,1.0m);
+            Assert.AreEqual(0.01m, a.CalculateInterest());
         }
+
     }
 }
