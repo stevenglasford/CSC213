@@ -64,7 +64,13 @@ namespace UnitTestProject1
         public void TestNegSav()
         {
             SavingsAccount a = new SavingsAccount(-10.0m, 1.0m);
+        }
 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void TestNegChq()
+        {
+            ChequeingAccount a = new ChequeingAccount(-10.0m, 1.0m);
         }
 
         [TestMethod]
@@ -86,9 +92,9 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestSavings()
         {
-            ChequeingAccount a = new ChequeingAccount(10.0m, 1.0m);
-            a.Credit(2.0m);
-            Assert.AreEqual(11.0m, a.Balance);
+            SavingsAccount a = new SavingsAccount(10.0m, 1.0m);
+            Assert.AreEqual(10.0m, a.Balance);
+            Assert.AreEqual(1.0m, a.Rate);
         }
 
         [TestMethod]
@@ -97,6 +103,46 @@ namespace UnitTestProject1
             ChequeingAccount a = new ChequeingAccount(10.0m, 1.0m);
             Assert.AreEqual(10.0m, a.Balance);
             Assert.AreEqual(1.0m, a.Fee);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void TestBadChequeingDebit()
+        {
+            ChequeingAccount a = new ChequeingAccount(10.0m, 1.0m);
+            a.Debit(100.0m);
+        }
+
+        [TestMethod]
+        public void TestSavingsDebit()
+        {
+            SavingsAccount a = new SavingsAccount(10.0m, 1.0m);
+            a.Debit(6.0m);
+            Assert.AreEqual(4.0m, a.Balance);
+        }
+
+        [TestMethod]
+        public void TestSavingsCredit()
+        {
+            SavingsAccount a = new SavingsAccount(10.0m, 1.0m);
+            a.Credit(6.0m);
+            Assert.AreEqual(16.0m, a.Balance);
+        }
+
+        [TestMethod]
+        public void TestChequeingCredit()
+        {
+            ChequeingAccount a = new ChequeingAccount(10.0m, 1.0m);
+            a.Credit(6.0m);
+            Assert.AreEqual(15.0m, a.Balance);
+        }
+
+        [TestMethod]
+        public void TestChequeingDebit()
+        {
+            ChequeingAccount a = new ChequeingAccount(10.0m, 1.0m);
+            a.Debit(6.0m);
+            Assert.AreEqual(3.0m, a.Balance);
         }
 
     }

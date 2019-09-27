@@ -16,7 +16,7 @@ namespace Glasford_926
             Rate = rate;
         }
 
-        decimal Rate
+        public decimal Rate
         {
             get
             {
