@@ -13,7 +13,7 @@ namespace Glasford_926
         public SavingsAccount(decimal initialBalance, decimal rate) 
             : base(initialBalance)
         {
-            this.Rate = rate;
+            Rate = rate;
         }
 
         decimal Rate
@@ -24,7 +24,7 @@ namespace Glasford_926
             }
             set
             {
-                Rate = rate;
+                rate = value;
             }
         }
 
