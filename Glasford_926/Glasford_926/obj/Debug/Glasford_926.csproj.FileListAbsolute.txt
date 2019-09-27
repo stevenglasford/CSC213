@@ -6,3 +6,4 @@ C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasfo
 C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\obj\Debug\Glasford_926.csproj.CoreCompileInputs.cache
 C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\obj\Debug\Glasford_926.exe
 C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\obj\Debug\Glasford_926.pdb
+C:\Users\steven.glasford\OneDrive - North Dakota University System\CSC213\Glasford_926\Glasford_926\obj\Debug\Glasford_926.csprojAssemblyReference.cache

@@ -13,10 +13,10 @@ namespace Glasford_926
         public ChequeingAccount(decimal initialBalance, decimal fee) 
             : base(initialBalance)
         {
-            this.Fee = fee;
+            this.fee = fee;
         }
 
-        decimal Fee
+        public decimal Fee
         {
             get
             {
@@ -24,15 +24,19 @@ namespace Glasford_926
             }
             set
             {
-                Fee = fee;
+                fee = value;
             }
         }
 
         public override void Credit(decimal dollas)
         {
-            if (Balance - fee - dollas >= 0.0m)
+            if(dollas < 0)
             {
-                base.Credit(dollas + fee);
+                throw new ArgumentOutOfRangeException("Wrong credit");
+            }
+            else if (Balance - fee - dollas >= 0.0m)
+            {
+                base.Credit(dollas - fee);
             }
             else
             {
@@ -43,7 +47,11 @@ namespace Glasford_926
 
         public override void Debit(decimal green)
         {
-            if (Balance >= (green + fee) )
+            if (green < 0)
+            {
+                throw new ArgumentOutOfRangeException("Wrong Debit bitch");
+            }
+            else if (Balance >= (green + fee) )
             {
                 base.Debit(green + fee);
             }
