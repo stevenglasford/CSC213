@@ -217,7 +217,7 @@
             this.titlesDataGridView.DataSource = this.titlesBindingSource;
             this.titlesDataGridView.Location = new System.Drawing.Point(54, 86);
             this.titlesDataGridView.Name = "titlesDataGridView";
-            this.titlesDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.titlesDataGridView.Size = new System.Drawing.Size(450, 230);
             this.titlesDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
