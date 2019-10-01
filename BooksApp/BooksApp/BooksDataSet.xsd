@@ -105,7 +105,19 @@ SELECT AuthorID, FirstName, LastName FROM Authors WHERE (AuthorID = @AuthorID)</
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="BooksConnectionString (Settings)" DbObjectName="dbo.Authors" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByLastName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillByLastName" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByLastName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AuthorID, FirstName, LastName
+FROM            Authors
+WHERE        (LastName LIKE 'D%')
+ORDER BY LastName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TitlesTableAdapter" GeneratorDataComponentClassName="TitlesTableAdapter" Name="Titles" UserDataComponentName="TitlesTableAdapter">
             <MainSource>
