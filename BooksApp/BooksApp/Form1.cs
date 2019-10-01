@@ -31,5 +31,18 @@ namespace BooksApp
             this.titlesTableAdapter.Fill(this.booksDataSet.Titles);
 
         }
+
+        private void FillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.titlesTableAdapter.FillBy(this.booksDataSet.Titles);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

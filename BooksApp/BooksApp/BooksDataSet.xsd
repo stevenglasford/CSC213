@@ -163,7 +163,16 @@ SELECT ISBN, Title, EditionNumber, Copyright FROM Titles WHERE (ISBN = @ISBN)</C
               <Mapping SourceColumn="EditionNumber" DataSetColumn="EditionNumber" />
               <Mapping SourceColumn="Copyright" DataSetColumn="Copyright" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="BooksConnectionString (Settings)" DbObjectName="dbo.Titles" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ISBN, Title, EditionNumber, Copyright FROM dbo.Titles</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -173,7 +182,7 @@ SELECT ISBN, Title, EditionNumber, Copyright FROM Titles WHERE (ISBN = @ISBN)</C
   <xs:element name="BooksDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BooksDataSet" msprop:Generator_UserDSName="BooksDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="AuthorISBN" msprop:Generator_TableClassName="AuthorISBNDataTable" msprop:Generator_TableVarName="tableAuthorISBN" msprop:Generator_TablePropName="AuthorISBN" msprop:Generator_RowDeletingName="AuthorISBNRowDeleting" msprop:Generator_RowChangingName="AuthorISBNRowChanging" msprop:Generator_RowEvHandlerName="AuthorISBNRowChangeEventHandler" msprop:Generator_RowDeletedName="AuthorISBNRowDeleted" msprop:Generator_UserTableName="AuthorISBN" msprop:Generator_RowChangedName="AuthorISBNRowChanged" msprop:Generator_RowEvArgName="AuthorISBNRowChangeEvent" msprop:Generator_RowClassName="AuthorISBNRow">
+        <xs:element name="AuthorISBN" msprop:Generator_TableClassName="AuthorISBNDataTable" msprop:Generator_TableVarName="tableAuthorISBN" msprop:Generator_RowChangedName="AuthorISBNRowChanged" msprop:Generator_TablePropName="AuthorISBN" msprop:Generator_RowDeletingName="AuthorISBNRowDeleting" msprop:Generator_RowChangingName="AuthorISBNRowChanging" msprop:Generator_RowEvHandlerName="AuthorISBNRowChangeEventHandler" msprop:Generator_RowDeletedName="AuthorISBNRowDeleted" msprop:Generator_RowClassName="AuthorISBNRow" msprop:Generator_UserTableName="AuthorISBN" msprop:Generator_RowEvArgName="AuthorISBNRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AuthorID" msprop:Generator_ColumnVarNameInTable="columnAuthorID" msprop:Generator_ColumnPropNameInRow="AuthorID" msprop:Generator_ColumnPropNameInTable="AuthorIDColumn" msprop:Generator_UserColumnName="AuthorID" type="xs:int" />
@@ -187,7 +196,7 @@ SELECT ISBN, Title, EditionNumber, Copyright FROM Titles WHERE (ISBN = @ISBN)</C
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Authors" msprop:Generator_TableClassName="AuthorsDataTable" msprop:Generator_TableVarName="tableAuthors" msprop:Generator_TablePropName="Authors" msprop:Generator_RowDeletingName="AuthorsRowDeleting" msprop:Generator_RowChangingName="AuthorsRowChanging" msprop:Generator_RowEvHandlerName="AuthorsRowChangeEventHandler" msprop:Generator_RowDeletedName="AuthorsRowDeleted" msprop:Generator_UserTableName="Authors" msprop:Generator_RowChangedName="AuthorsRowChanged" msprop:Generator_RowEvArgName="AuthorsRowChangeEvent" msprop:Generator_RowClassName="AuthorsRow">
+        <xs:element name="Authors" msprop:Generator_TableClassName="AuthorsDataTable" msprop:Generator_TableVarName="tableAuthors" msprop:Generator_RowChangedName="AuthorsRowChanged" msprop:Generator_TablePropName="Authors" msprop:Generator_RowDeletingName="AuthorsRowDeleting" msprop:Generator_RowChangingName="AuthorsRowChanging" msprop:Generator_RowEvHandlerName="AuthorsRowChangeEventHandler" msprop:Generator_RowDeletedName="AuthorsRowDeleted" msprop:Generator_RowClassName="AuthorsRow" msprop:Generator_UserTableName="Authors" msprop:Generator_RowEvArgName="AuthorsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AuthorID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAuthorID" msprop:Generator_ColumnPropNameInRow="AuthorID" msprop:Generator_ColumnPropNameInTable="AuthorIDColumn" msprop:Generator_UserColumnName="AuthorID" type="xs:int" />
@@ -208,7 +217,7 @@ SELECT ISBN, Title, EditionNumber, Copyright FROM Titles WHERE (ISBN = @ISBN)</C
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Titles" msprop:Generator_TableClassName="TitlesDataTable" msprop:Generator_TableVarName="tableTitles" msprop:Generator_TablePropName="Titles" msprop:Generator_RowDeletingName="TitlesRowDeleting" msprop:Generator_RowChangingName="TitlesRowChanging" msprop:Generator_RowEvHandlerName="TitlesRowChangeEventHandler" msprop:Generator_RowDeletedName="TitlesRowDeleted" msprop:Generator_UserTableName="Titles" msprop:Generator_RowChangedName="TitlesRowChanged" msprop:Generator_RowEvArgName="TitlesRowChangeEvent" msprop:Generator_RowClassName="TitlesRow">
+        <xs:element name="Titles" msprop:Generator_TableClassName="TitlesDataTable" msprop:Generator_TableVarName="tableTitles" msprop:Generator_RowChangedName="TitlesRowChanged" msprop:Generator_TablePropName="Titles" msprop:Generator_RowDeletingName="TitlesRowDeleting" msprop:Generator_RowChangingName="TitlesRowChanging" msprop:Generator_RowEvHandlerName="TitlesRowChangeEventHandler" msprop:Generator_RowDeletedName="TitlesRowDeleted" msprop:Generator_RowClassName="TitlesRow" msprop:Generator_UserTableName="Titles" msprop:Generator_RowEvArgName="TitlesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ISBN" msprop:Generator_ColumnVarNameInTable="columnISBN" msprop:Generator_ColumnPropNameInRow="ISBN" msprop:Generator_ColumnPropNameInTable="ISBNColumn" msprop:Generator_UserColumnName="ISBN">
@@ -254,8 +263,8 @@ SELECT ISBN, Title, EditionNumber, Copyright FROM Titles WHERE (ISBN = @ISBN)</C
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_AuthorISBN_Authors" msdata:parent="Authors" msdata:child="AuthorISBN" msdata:parentkey="AuthorID" msdata:childkey="AuthorID" msprop:Generator_UserChildTable="AuthorISBN" msprop:Generator_ChildPropName="GetAuthorISBNRows" msprop:Generator_UserRelationName="FK_AuthorISBN_Authors" msprop:Generator_RelationVarName="relationFK_AuthorISBN_Authors" msprop:Generator_UserParentTable="Authors" msprop:Generator_ParentPropName="AuthorsRow" />
-      <msdata:Relationship name="FK_AuthorISBN_Titles" msdata:parent="Titles" msdata:child="AuthorISBN" msdata:parentkey="ISBN" msdata:childkey="ISBN" msprop:Generator_UserChildTable="AuthorISBN" msprop:Generator_ChildPropName="GetAuthorISBNRows" msprop:Generator_UserRelationName="FK_AuthorISBN_Titles" msprop:Generator_RelationVarName="relationFK_AuthorISBN_Titles" msprop:Generator_UserParentTable="Titles" msprop:Generator_ParentPropName="TitlesRow" />
+      <msdata:Relationship name="FK_AuthorISBN_Authors" msdata:parent="Authors" msdata:child="AuthorISBN" msdata:parentkey="AuthorID" msdata:childkey="AuthorID" msprop:Generator_UserChildTable="AuthorISBN" msprop:Generator_ChildPropName="GetAuthorISBNRows" msprop:Generator_UserRelationName="FK_AuthorISBN_Authors" msprop:Generator_ParentPropName="AuthorsRow" msprop:Generator_RelationVarName="relationFK_AuthorISBN_Authors" msprop:Generator_UserParentTable="Authors" />
+      <msdata:Relationship name="FK_AuthorISBN_Titles" msdata:parent="Titles" msdata:child="AuthorISBN" msdata:parentkey="ISBN" msdata:childkey="ISBN" msprop:Generator_UserChildTable="AuthorISBN" msprop:Generator_ChildPropName="GetAuthorISBNRows" msprop:Generator_UserRelationName="FK_AuthorISBN_Titles" msprop:Generator_ParentPropName="TitlesRow" msprop:Generator_RelationVarName="relationFK_AuthorISBN_Titles" msprop:Generator_UserParentTable="Titles" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
