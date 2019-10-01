@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BooksApp
 {
-    public partial class Form2 : Form
+    public partial class Authors : Form
     {
-        public Form2()
+        public Authors()
         {
             InitializeComponent();
         }
@@ -28,8 +28,19 @@ namespace BooksApp
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'booksDataSet.Authors' table. You can move, or remove it, as needed.
-            this.authorsTableAdapter.Fill(this.booksDataSet.Authors);
+            
 
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShowAll_Click(object sender, EventArgs e)
+        {
+            //show all of the data
+            this.authorsTableAdapter.Fill(this.booksDataSet.Authors);
         }
     }
 }

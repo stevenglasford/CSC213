@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BooksApp
 {
-    public partial class Form1 : Form
+    public partial class Titles : Form
     {
-        public Form1()
+        public Titles()
         {
             InitializeComponent();
         }

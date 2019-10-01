@@ -1,6 +1,6 @@
 ﻿namespace BooksApp
 {
-    partial class Form2
+    partial class Authors
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Authors));
             this.booksDataSet = new BooksApp.BooksDataSet();
             this.authorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.authorsTableAdapter = new BooksApp.BooksDataSetTableAdapters.AuthorsTableAdapter();
@@ -51,6 +51,9 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.selectYear = new System.Windows.Forms.Button();
+            this.showAll = new System.Windows.Forms.Button();
+            this.showLastName = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.booksDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorsBindingNavigator)).BeginInit();
@@ -137,6 +140,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -145,14 +149,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -160,7 +164,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -169,13 +173,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -192,7 +196,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // authorsBindingNavigatorSaveItem
@@ -200,7 +204,7 @@
             this.authorsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.authorsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("authorsBindingNavigatorSaveItem.Image")));
             this.authorsBindingNavigatorSaveItem.Name = "authorsBindingNavigatorSaveItem";
-            this.authorsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.authorsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.authorsBindingNavigatorSaveItem.Text = "Save Data";
             this.authorsBindingNavigatorSaveItem.Click += new System.EventHandler(this.AuthorsBindingNavigatorSaveItem_Click);
             // 
@@ -213,7 +217,7 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.authorsDataGridView.DataSource = this.authorsBindingSource;
-            this.authorsDataGridView.Location = new System.Drawing.Point(209, 55);
+            this.authorsDataGridView.Location = new System.Drawing.Point(68, 47);
             this.authorsDataGridView.Name = "authorsDataGridView";
             this.authorsDataGridView.Size = new System.Drawing.Size(379, 328);
             this.authorsDataGridView.TabIndex = 1;
@@ -237,14 +241,46 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "LastName";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // Form2
+            // selectYear
+            // 
+            this.selectYear.Location = new System.Drawing.Point(513, 59);
+            this.selectYear.Name = "selectYear";
+            this.selectYear.Size = new System.Drawing.Size(114, 36);
+            this.selectYear.TabIndex = 2;
+            this.selectYear.Text = "Select Year";
+            this.selectYear.UseVisualStyleBackColor = true;
+            this.selectYear.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // showAll
+            // 
+            this.showAll.Location = new System.Drawing.Point(519, 136);
+            this.showAll.Name = "showAll";
+            this.showAll.Size = new System.Drawing.Size(107, 36);
+            this.showAll.TabIndex = 3;
+            this.showAll.Text = "showAll";
+            this.showAll.UseVisualStyleBackColor = true;
+            this.showAll.Click += new System.EventHandler(this.ShowAll_Click);
+            // 
+            // showLastName
+            // 
+            this.showLastName.Location = new System.Drawing.Point(522, 228);
+            this.showLastName.Name = "showLastName";
+            this.showLastName.Size = new System.Drawing.Size(104, 67);
+            this.showLastName.TabIndex = 4;
+            this.showLastName.Text = "Show Last Name";
+            this.showLastName.UseVisualStyleBackColor = true;
+            // 
+            // Authors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.showLastName);
+            this.Controls.Add(this.showAll);
+            this.Controls.Add(this.selectYear);
             this.Controls.Add(this.authorsDataGridView);
             this.Controls.Add(this.authorsBindingNavigator);
-            this.Name = "Form2";
+            this.Name = "Authors";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.booksDataSet)).EndInit();
@@ -281,5 +317,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button selectYear;
+        private System.Windows.Forms.Button showAll;
+        private System.Windows.Forms.Button showLastName;
     }
 }

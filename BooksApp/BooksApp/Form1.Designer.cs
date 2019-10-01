@@ -1,6 +1,6 @@
 ﻿namespace BooksApp
 {
-    partial class Form1
+    partial class Titles
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.booksDataSet = new BooksApp.BooksDataSet();
-            this.titlesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.titlesTableAdapter = new BooksApp.BooksDataSetTableAdapters.TitlesTableAdapter();
-            this.tableAdapterManager = new BooksApp.BooksDataSetTableAdapters.TableAdapterManager();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Titles));
             this.titlesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -48,41 +44,23 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.titlesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.titlesDataGridView = new System.Windows.Forms.DataGridView();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.booksDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.titlesBindingSource)).BeginInit();
+            this.titlesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.booksDataSet = new BooksApp.BooksDataSet();
+            this.titlesTableAdapter = new BooksApp.BooksDataSetTableAdapters.TitlesTableAdapter();
+            this.tableAdapterManager = new BooksApp.BooksDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.titlesBindingNavigator)).BeginInit();
             this.titlesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.titlesDataGridView)).BeginInit();
             this.fillByToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.titlesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.booksDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // booksDataSet
-            // 
-            this.booksDataSet.DataSetName = "BooksDataSet";
-            this.booksDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // titlesBindingSource
-            // 
-            this.titlesBindingSource.DataMember = "Titles";
-            this.titlesBindingSource.DataSource = this.booksDataSet;
-            // 
-            // titlesTableAdapter
-            // 
-            this.titlesTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AuthorISBNTableAdapter = null;
-            this.tableAdapterManager.AuthorsTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.TitlesTableAdapter = this.titlesTableAdapter;
-            this.tableAdapterManager.UpdateOrder = BooksApp.BooksDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // titlesBindingNavigator
             // 
@@ -141,6 +119,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -223,6 +202,24 @@
             this.titlesDataGridView.Size = new System.Drawing.Size(450, 230);
             this.titlesDataGridView.TabIndex = 1;
             // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillByToolStripButton});
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 25);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(800, 25);
+            this.fillByToolStrip.TabIndex = 2;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            // 
+            // fillByToolStripButton
+            // 
+            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByToolStripButton.Name = "fillByToolStripButton";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
+            this.fillByToolStripButton.Text = "FillBy";
+            this.fillByToolStripButton.Click += new System.EventHandler(this.FillByToolStripButton_Click);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ISBN";
@@ -247,25 +244,29 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Copyright";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // fillByToolStrip
+            // titlesBindingSource
             // 
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(111, 25);
-            this.fillByToolStrip.TabIndex = 2;
-            this.fillByToolStrip.Text = "fillByToolStrip";
+            this.titlesBindingSource.DataMember = "Titles";
+            this.titlesBindingSource.DataSource = this.booksDataSet;
             // 
-            // fillByToolStripButton
+            // booksDataSet
             // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
-            this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.FillByToolStripButton_Click);
+            this.booksDataSet.DataSetName = "BooksDataSet";
+            this.booksDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Form1
+            // titlesTableAdapter
+            // 
+            this.titlesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AuthorISBNTableAdapter = null;
+            this.tableAdapterManager.AuthorsTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.TitlesTableAdapter = this.titlesTableAdapter;
+            this.tableAdapterManager.UpdateOrder = BooksApp.BooksDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // Titles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -273,17 +274,17 @@
             this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.titlesDataGridView);
             this.Controls.Add(this.titlesBindingNavigator);
-            this.Name = "Form1";
+            this.Name = "Titles";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.booksDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.titlesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.titlesBindingNavigator)).EndInit();
             this.titlesBindingNavigator.ResumeLayout(false);
             this.titlesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.titlesDataGridView)).EndInit();
             this.fillByToolStrip.ResumeLayout(false);
             this.fillByToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.titlesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.booksDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
