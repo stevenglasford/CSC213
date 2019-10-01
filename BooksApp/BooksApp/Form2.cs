@@ -42,5 +42,11 @@ namespace BooksApp
             //show all of the data
             this.authorsTableAdapter.Fill(this.booksDataSet.Authors);
         }
+
+        private void ShowLastName_Click(object sender, EventArgs e)
+        {
+            this.authorsTableAdapter.FillByLastName(this.booksDataSet.Authors);
+        }
+    }
     }
 }
