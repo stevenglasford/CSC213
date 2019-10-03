@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MultiformProducts
 {
-    public partial class Form1 : Form
+    public partial class DetailsForm : Form
     {
-        public Form1()
+        public DetailsForm()
         {
             InitializeComponent();
         }
@@ -25,26 +25,14 @@ namespace MultiformProducts
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void DetailsForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'productDataSet.Product' table. You can move, or remove it, as needed.
             this.productTableAdapter.Fill(this.productDataSet.Product);
 
         }
 
-        private void ShowDetailsButton_Click(object sender, EventArgs e)
-        {
-            //Create an instance of the DetailsForm
-            DetailsForm details = new DetailsForm();
-
-            //display the form
-            details.ShowDialog();
-
-            //Update the dataset
-            this.productTableAdapter.Fill(this.productDataSet.Product);
-        }
-
-        private void ExitButton_Click(object sender, EventArgs e)
+        private void CloseButton_Click(object sender, EventArgs e)
         {
             //close the form
             this.Close();
