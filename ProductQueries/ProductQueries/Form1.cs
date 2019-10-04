@@ -41,5 +41,18 @@ namespace ProductQueries
         {
             this.productTableAdapter.FillByUnits(this.productDataSet.Product);
         }
+
+        private void averagePriceButton_Click(object sender, EventArgs e)
+        {
+            //Declare a variable to hold the average price
+            decimal averagePrice;
+
+            //Get the average price
+            averagePrice = (decimal)this.productTableAdapter.AveragePrice();
+
+            //Display the average price.
+            MessageBox.Show("Average price of all items: " +
+                averagePrice.ToString("c"));
+        }
     }
 }

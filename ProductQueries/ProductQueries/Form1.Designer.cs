@@ -44,6 +44,8 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.productBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.productDataGridView = new System.Windows.Forms.DataGridView();
+            this.sortByPriceButton = new System.Windows.Forms.Button();
+            this.unitsGreater100Button = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,8 +54,7 @@
             this.productDataSet = new ProductQueries.ProductDataSet();
             this.productTableAdapter = new ProductQueries.ProductDataSetTableAdapters.ProductTableAdapter();
             this.tableAdapterManager = new ProductQueries.ProductDataSetTableAdapters.TableAdapterManager();
-            this.sortByPriceButton = new System.Windows.Forms.Button();
-            this.unitsGreater100Button = new System.Windows.Forms.Button();
+            this.averagePriceButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingNavigator)).BeginInit();
             this.productBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).BeginInit();
@@ -204,6 +205,26 @@
             this.productDataGridView.Size = new System.Drawing.Size(680, 239);
             this.productDataGridView.TabIndex = 1;
             // 
+            // sortByPriceButton
+            // 
+            this.sortByPriceButton.Location = new System.Drawing.Point(115, 320);
+            this.sortByPriceButton.Name = "sortByPriceButton";
+            this.sortByPriceButton.Size = new System.Drawing.Size(172, 52);
+            this.sortByPriceButton.TabIndex = 2;
+            this.sortByPriceButton.Text = "Sort By Price";
+            this.sortByPriceButton.UseVisualStyleBackColor = true;
+            this.sortByPriceButton.Click += new System.EventHandler(this.sortByPriceButton_Click);
+            // 
+            // unitsGreater100Button
+            // 
+            this.unitsGreater100Button.Location = new System.Drawing.Point(353, 318);
+            this.unitsGreater100Button.Name = "unitsGreater100Button";
+            this.unitsGreater100Button.Size = new System.Drawing.Size(127, 53);
+            this.unitsGreater100Button.TabIndex = 3;
+            this.unitsGreater100Button.Text = "Products With More Than 100 Units";
+            this.unitsGreater100Button.UseVisualStyleBackColor = true;
+            this.unitsGreater100Button.Click += new System.EventHandler(this.unitsGreater100Button_Click);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Product_Number";
@@ -256,31 +277,22 @@
             this.tableAdapterManager.ProductTableAdapter = this.productTableAdapter;
             this.tableAdapterManager.UpdateOrder = ProductQueries.ProductDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // sortByPriceButton
+            // averagePriceButton
             // 
-            this.sortByPriceButton.Location = new System.Drawing.Point(115, 320);
-            this.sortByPriceButton.Name = "sortByPriceButton";
-            this.sortByPriceButton.Size = new System.Drawing.Size(172, 52);
-            this.sortByPriceButton.TabIndex = 2;
-            this.sortByPriceButton.Text = "Sort By Price";
-            this.sortByPriceButton.UseVisualStyleBackColor = true;
-            this.sortByPriceButton.Click += new System.EventHandler(this.sortByPriceButton_Click);
-            // 
-            // unitsGreater100Button
-            // 
-            this.unitsGreater100Button.Location = new System.Drawing.Point(353, 318);
-            this.unitsGreater100Button.Name = "unitsGreater100Button";
-            this.unitsGreater100Button.Size = new System.Drawing.Size(127, 53);
-            this.unitsGreater100Button.TabIndex = 3;
-            this.unitsGreater100Button.Text = "Products With More Than 100 Units";
-            this.unitsGreater100Button.UseVisualStyleBackColor = true;
-            this.unitsGreater100Button.Click += new System.EventHandler(this.unitsGreater100Button_Click);
+            this.averagePriceButton.Location = new System.Drawing.Point(530, 320);
+            this.averagePriceButton.Name = "averagePriceButton";
+            this.averagePriceButton.Size = new System.Drawing.Size(126, 52);
+            this.averagePriceButton.TabIndex = 4;
+            this.averagePriceButton.Text = "Average Price of All Items";
+            this.averagePriceButton.UseVisualStyleBackColor = true;
+            this.averagePriceButton.Click += new System.EventHandler(this.averagePriceButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 447);
+            this.Controls.Add(this.averagePriceButton);
             this.Controls.Add(this.unitsGreater100Button);
             this.Controls.Add(this.sortByPriceButton);
             this.Controls.Add(this.productDataGridView);
@@ -325,6 +337,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button sortByPriceButton;
         private System.Windows.Forms.Button unitsGreater100Button;
+        private System.Windows.Forms.Button averagePriceButton;
     }
 }
 

@@ -64,6 +64,14 @@ SELECT Product_Number, Description, Units_On_Hand, Price FROM Product WHERE (Pro
               <Mapping SourceColumn="Price" DataSetColumn="Price" />
             </Mappings>
             <Sources>
+              <DbSource ConnectionRef="ProductDB (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AveragePrice" Modifier="Public" Name="AveragePrice" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="AveragePrice">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select Avg(Price) From Product</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="ProductDB (Settings)" DbObjectName="dbo.Product" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPrice" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByPrice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByPrice">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
