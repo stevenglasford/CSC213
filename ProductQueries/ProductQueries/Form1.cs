@@ -16,5 +16,30 @@ namespace ProductQueries
         {
             InitializeComponent();
         }
+
+        private void productBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.productBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.productDataSet);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'productDataSet.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter.Fill(this.productDataSet.Product);
+
+        }
+
+        private void sortByPriceButton_Click(object sender, EventArgs e)
+        {
+            this.productTableAdapter.FillByPrice(this.productDataSet.Product);
+        }
+
+        private void unitsGreater100Button_Click(object sender, EventArgs e)
+        {
+            this.productTableAdapter.FillByUnits(this.productDataSet.Product);
+        }
     }
 }
