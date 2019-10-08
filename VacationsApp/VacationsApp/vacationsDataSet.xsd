@@ -76,7 +76,24 @@ SELECT Id, Name, Country, VisitDate, Days FROM Locations WHERE (Id = @Id)</Comma
               <Mapping SourceColumn="VisitDate" DataSetColumn="VisitDate" />
               <Mapping SourceColumn="Days" DataSetColumn="Days" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="vacationsConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AvgDays" Modifier="Public" Name="AvgDays" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="AvgDays">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AVG(Days) FROM Locations</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="vacationsConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MinDays" Modifier="Public" Name="MinDays" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="MinDays">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT MIN(Days) FROM Locations</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -86,7 +103,7 @@ SELECT Id, Name, Country, VisitDate, Days FROM Locations WHERE (Id = @Id)</Comma
   <xs:element name="vacationsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="vacationsDataSet" msprop:Generator_UserDSName="vacationsDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Locations" msprop:Generator_TableClassName="LocationsDataTable" msprop:Generator_TableVarName="tableLocations" msprop:Generator_TablePropName="Locations" msprop:Generator_RowDeletingName="LocationsRowDeleting" msprop:Generator_RowChangingName="LocationsRowChanging" msprop:Generator_RowEvHandlerName="LocationsRowChangeEventHandler" msprop:Generator_RowDeletedName="LocationsRowDeleted" msprop:Generator_UserTableName="Locations" msprop:Generator_RowChangedName="LocationsRowChanged" msprop:Generator_RowEvArgName="LocationsRowChangeEvent" msprop:Generator_RowClassName="LocationsRow">
+        <xs:element name="Locations" msprop:Generator_TableClassName="LocationsDataTable" msprop:Generator_TableVarName="tableLocations" msprop:Generator_RowChangedName="LocationsRowChanged" msprop:Generator_TablePropName="Locations" msprop:Generator_RowDeletingName="LocationsRowDeleting" msprop:Generator_RowChangingName="LocationsRowChanging" msprop:Generator_RowEvHandlerName="LocationsRowChangeEventHandler" msprop:Generator_RowDeletedName="LocationsRowDeleted" msprop:Generator_RowClassName="LocationsRow" msprop:Generator_UserTableName="Locations" msprop:Generator_RowEvArgName="LocationsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
