@@ -41,5 +41,21 @@ namespace VacationsApp
         {
             label2.Text = this.locationsTableAdapter.AvgDays().ToString();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            int dayFrom = Convert.ToInt32(textBox1.Text);
+            int dayTo = Convert.ToInt32(textBox2.Text);
+            this.locationsTableAdapter.
+                FillByDays(this.vacationsDataSet.Locations,dayFrom,dayTo);
+        }
+
+        private void AfterDate_Click(object sender, EventArgs e)
+        {
+            DateTime myDate = Convert.ToDateTime(afterDateTextbox.Text);
+
+            this.locationsTableAdapter.
+                FillByDate(this.vacationsDataSet.Locations, myDate);
+        }
     }
 }

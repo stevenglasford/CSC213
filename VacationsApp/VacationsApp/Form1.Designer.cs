@@ -48,6 +48,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.minButton = new System.Windows.Forms.Button();
             this.averageButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +61,9 @@
             this.vacationsDataSet = new VacationsApp.vacationsDataSet();
             this.locationsTableAdapter = new VacationsApp.vacationsDataSetTableAdapters.LocationsTableAdapter();
             this.tableAdapterManager = new VacationsApp.vacationsDataSetTableAdapters.TableAdapterManager();
+            this.label4 = new System.Windows.Forms.Label();
+            this.afterDate = new System.Windows.Forms.Button();
+            this.afterDateTextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.locationsBindingNavigator)).BeginInit();
             this.locationsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.locationsDataGridView)).BeginInit();
@@ -90,7 +97,7 @@
             this.locationsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.locationsBindingNavigator.Name = "locationsBindingNavigator";
             this.locationsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.locationsBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.locationsBindingNavigator.Size = new System.Drawing.Size(941, 25);
             this.locationsBindingNavigator.TabIndex = 0;
             this.locationsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -202,7 +209,7 @@
             this.locationsDataGridView.DataSource = this.locationsBindingSource;
             this.locationsDataGridView.Location = new System.Drawing.Point(12, 51);
             this.locationsDataGridView.Name = "locationsDataGridView";
-            this.locationsDataGridView.Size = new System.Drawing.Size(577, 209);
+            this.locationsDataGridView.Size = new System.Drawing.Size(546, 209);
             this.locationsDataGridView.TabIndex = 1;
             // 
             // label1
@@ -240,6 +247,39 @@
             this.averageButton.Text = "Average";
             this.averageButton.UseVisualStyleBackColor = true;
             this.averageButton.Click += new System.EventHandler(this.AverageButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(811, 69);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 29);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Days";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(574, 78);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(65, 20);
+            this.textBox1.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(693, 78);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(64, 20);
+            this.textBox2.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(576, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "From";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -291,11 +331,44 @@
             this.tableAdapterManager.LocationsTableAdapter = this.locationsTableAdapter;
             this.tableAdapterManager.UpdateOrder = VacationsApp.vacationsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(696, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(20, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "To";
+            // 
+            // afterDate
+            // 
+            this.afterDate.Location = new System.Drawing.Point(778, 331);
+            this.afterDate.Name = "afterDate";
+            this.afterDate.Size = new System.Drawing.Size(111, 31);
+            this.afterDate.TabIndex = 11;
+            this.afterDate.Text = "After Date";
+            this.afterDate.UseVisualStyleBackColor = true;
+            this.afterDate.Click += new System.EventHandler(this.AfterDate_Click);
+            // 
+            // afterDateTextbox
+            // 
+            this.afterDateTextbox.Location = new System.Drawing.Point(603, 337);
+            this.afterDateTextbox.Name = "afterDateTextbox";
+            this.afterDateTextbox.Size = new System.Drawing.Size(123, 20);
+            this.afterDateTextbox.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(941, 450);
+            this.Controls.Add(this.afterDateTextbox);
+            this.Controls.Add(this.afterDate);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.averageButton);
             this.Controls.Add(this.minButton);
             this.Controls.Add(this.label2);
@@ -345,6 +418,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button minButton;
         private System.Windows.Forms.Button averageButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button afterDate;
+        private System.Windows.Forms.TextBox afterDateTextbox;
     }
 }
 
