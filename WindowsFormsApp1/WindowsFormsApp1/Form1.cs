@@ -19,7 +19,9 @@ namespace WindowsFormsApp1
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string con = comboBox1.SelectedValue.ToString();
 
+            dataGridView1.DataSource = this.locationsTableAdapter.GetDataByCountry(con);
         }
 
         private void Form1_Load(object sender, EventArgs e)
