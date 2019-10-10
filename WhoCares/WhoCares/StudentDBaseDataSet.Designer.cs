@@ -880,11 +880,17 @@ SELECT StudentId, FirstName, LastName, GPA, StudentDate FROM StudentTable WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT StudentId, FirstName, LastName, GPA, StudentDate FROM dbo.StudentTable";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        StudentId, FirstName, LastName, GPA, StudentDate\r\nFROM            S" +
+                "tudentTable\r\nWHERE        (StudentId = @param)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@param", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "StudentId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -906,6 +912,18 @@ SELECT StudentId, FirstName, LastName, GPA, StudentDate FROM StudentTable WHERE 
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual StudentDBaseDataSet.StudentTableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            StudentDBaseDataSet.StudentTableDataTable dataTable = new StudentDBaseDataSet.StudentTableDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual StudentDBaseDataSet.StudentTableDataTable GetDataByStudentID(int param) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(param));
             StudentDBaseDataSet.StudentTableDataTable dataTable = new StudentDBaseDataSet.StudentTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
