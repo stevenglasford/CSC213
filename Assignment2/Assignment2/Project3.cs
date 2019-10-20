@@ -18,8 +18,46 @@ namespace Assignment2
             InitializeComponent();
         }
 
-        PopulationDBEntities dbcon = new PopulationDBEntities();
-        private void Project2_Load(object sender, EventArgs e)
+        PopulationDBEntities1 dbcon = new PopulationDBEntities1();
+        private void Project3_Load(object sender, EventArgs e)
+        {
+            dbcon.Cities.Load();
+            
+            //automatically order by the city name, upon loading
+            var result = from x in dbcon.Cities.Local
+                         orderby x.CityName
+                         select x;
+
+            dataGridView2.DataSource = dbcon.Cities.Local.ToList();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            AnsLabel.Text = "Answer: " + dbcon.Cities.Average(c => c.Population).ToString() ;
+        }
+
+        private void PopAscendingButton_Click(object sender, EventArgs e)
+        {
+            dbcon.Cities.Load();
+            //order by the population
+            var result = from x in dbcon.Cities.Local
+                         orderby x.Population
+                         select x;
+
+            dataGridView2.DataSource = result.ToList();
+        }
+
+        private void PopDescendingButton_Click(object sender, EventArgs e)
+        {
+            dbcon.Cities.Load();
+            var result = from x in dbcon.Cities.Local
+                         orderby x.Population descending
+                         select x;
+
+            dataGridView2.DataSource = result.ToList();
+        }
+
+        private void PopNameButton_Click(object sender, EventArgs e)
         {
             dbcon.Cities.Load();
 
@@ -27,45 +65,22 @@ namespace Assignment2
                          orderby x.CityName
                          select x;
 
-
-
-            dataGridView1.DataSource = dbcon.Cities.Local.ToList();
-
+            dataGridView2.DataSource = dbcon.Cities.Local.ToList();
         }
 
-        private void GroupBox1_Enter(object sender, EventArgs e)
+        private void TotalButton_Click(object sender, EventArgs e)
         {
-
+            AnsLabel.Text = "Answer: " + dbcon.Cities.Sum(c => c.Population).ToString();
         }
 
-        private void PopulationAscendingButton_Click(object sender, EventArgs e)
+        private void LowButton_Click(object sender, EventArgs e)
         {
-
+            AnsLabel.Text = "Answer: " + dbcon.Cities.Min(c => c.Population).ToString();
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void HighButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void StatisticsGroup_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
+            AnsLabel.Text = "Answer: " + dbcon.Cities.Max(c => c.Population).ToString();
         }
     }
 }

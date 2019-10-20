@@ -13,10 +13,10 @@ namespace Assignment2
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PopulationDBEntities : DbContext
+    public partial class PopulationDBEntities1 : DbContext
     {
-        public PopulationDBEntities()
-            : base("name=PopulationDBEntities")
+        public PopulationDBEntities1()
+            : base("name=PopulationDBEntities1")
         {
         }
     

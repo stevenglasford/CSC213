@@ -27,7 +27,7 @@
           <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Population" Type="Double" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="PopulationDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PopulationDBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cities" EntityType="Self.City" />
         </EntityContainer>
       </Schema>
@@ -35,7 +35,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PopulationDBModelStoreContainer" CdmEntityContainer="PopulationDBEntities">
+        <EntityContainerMapping StorageEntityContainer="PopulationDBModelStoreContainer" CdmEntityContainer="PopulationDBEntities1">
           <EntitySetMapping Name="Cities">
             <EntityTypeMapping TypeName="PopulationDBModel.City">
               <MappingFragment StoreEntitySet="City">

@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -89,6 +89,11 @@
       <DependentUpon>CityModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="PopulationDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PopulationDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Project3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,11 +101,6 @@
       <DependentUpon>Project3.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
-    <Compile Include="PopulationDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PopulationDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="PreferredCustomer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,25 +150,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CityModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>CityModel.Context.cs</LastGenOutput>
-      <DependentUpon>CityModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="CityModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CityModel.edmx</DependentUpon>
-      <LastGenOutput>CityModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="PopulationDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="PopulationDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>PopulationDB.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
@@ -182,6 +163,25 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CityModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CityModel.edmx</DependentUpon>
+      <LastGenOutput>CityModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CityModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CityModel.edmx</DependentUpon>
+      <LastGenOutput>CityModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="PopulationDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PopulationDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>PopulationDB.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
