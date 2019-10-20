@@ -18,25 +18,6 @@ namespace StudentApp
             InitializeComponent();
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
         StudentDataBaseEntities dbcon = new StudentDataBaseEntities();
         
         private void Form1_Load(object sender, EventArgs e)
