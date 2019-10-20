@@ -39,9 +39,31 @@
             this.TotalButton = new System.Windows.Forms.Button();
             this.AvgButton = new System.Windows.Forms.Button();
             this.AnsLabel = new System.Windows.Forms.Label();
+            this.PopNameChangeText = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PopAddText = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.AddGroup = new System.Windows.Forms.GroupBox();
+            this.NameDeleteText = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.DeleteCityButton = new System.Windows.Forms.Button();
+            this.DeleteGroup = new System.Windows.Forms.GroupBox();
+            this.ChangeCityButton = new System.Windows.Forms.Button();
+            this.NameOldText = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.PopChangeText = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.NewNameText = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ChangeGroup = new System.Windows.Forms.GroupBox();
+            this.ShowCityButton = new System.Windows.Forms.Button();
+            this.CreateCityButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SortGroup.SuspendLayout();
             this.StatsGroup.SuspendLayout();
+            this.AddGroup.SuspendLayout();
+            this.DeleteGroup.SuspendLayout();
+            this.ChangeGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -157,9 +179,193 @@
             this.AnsLabel.TabIndex = 4;
             this.AnsLabel.Text = "Answer: ";
             // 
+            // PopNameChangeText
+            // 
+            this.PopNameChangeText.Location = new System.Drawing.Point(69, 25);
+            this.PopNameChangeText.Name = "PopNameChangeText";
+            this.PopNameChangeText.Size = new System.Drawing.Size(120, 20);
+            this.PopNameChangeText.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Name";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // PopAddText
+            // 
+            this.PopAddText.Location = new System.Drawing.Point(69, 51);
+            this.PopAddText.Name = "PopAddText";
+            this.PopAddText.Size = new System.Drawing.Size(120, 20);
+            this.PopAddText.TabIndex = 3;
+            this.PopAddText.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Population";
+            // 
+            // AddGroup
+            // 
+            this.AddGroup.Controls.Add(this.ShowCityButton);
+            this.AddGroup.Controls.Add(this.CreateCityButton);
+            this.AddGroup.Controls.Add(this.label2);
+            this.AddGroup.Controls.Add(this.PopAddText);
+            this.AddGroup.Controls.Add(this.label1);
+            this.AddGroup.Controls.Add(this.PopNameChangeText);
+            this.AddGroup.Location = new System.Drawing.Point(563, 12);
+            this.AddGroup.Name = "AddGroup";
+            this.AddGroup.Size = new System.Drawing.Size(195, 109);
+            this.AddGroup.TabIndex = 3;
+            this.AddGroup.TabStop = false;
+            this.AddGroup.Text = "Add a City";
+            // 
+            // NameDeleteText
+            // 
+            this.NameDeleteText.Location = new System.Drawing.Point(69, 16);
+            this.NameDeleteText.Name = "NameDeleteText";
+            this.NameDeleteText.Size = new System.Drawing.Size(120, 20);
+            this.NameDeleteText.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Name";
+            // 
+            // DeleteCityButton
+            // 
+            this.DeleteCityButton.Location = new System.Drawing.Point(16, 42);
+            this.DeleteCityButton.Name = "DeleteCityButton";
+            this.DeleteCityButton.Size = new System.Drawing.Size(173, 30);
+            this.DeleteCityButton.TabIndex = 2;
+            this.DeleteCityButton.Text = "Delete a City";
+            this.DeleteCityButton.UseVisualStyleBackColor = true;
+            this.DeleteCityButton.Click += new System.EventHandler(this.DeleteCityButton_Click);
+            // 
+            // DeleteGroup
+            // 
+            this.DeleteGroup.Controls.Add(this.DeleteCityButton);
+            this.DeleteGroup.Controls.Add(this.label5);
+            this.DeleteGroup.Controls.Add(this.NameDeleteText);
+            this.DeleteGroup.Location = new System.Drawing.Point(563, 276);
+            this.DeleteGroup.Name = "DeleteGroup";
+            this.DeleteGroup.Size = new System.Drawing.Size(195, 81);
+            this.DeleteGroup.TabIndex = 4;
+            this.DeleteGroup.TabStop = false;
+            this.DeleteGroup.Text = "Delete a City";
+            // 
+            // ChangeCityButton
+            // 
+            this.ChangeCityButton.Location = new System.Drawing.Point(23, 109);
+            this.ChangeCityButton.Name = "ChangeCityButton";
+            this.ChangeCityButton.Size = new System.Drawing.Size(138, 26);
+            this.ChangeCityButton.TabIndex = 0;
+            this.ChangeCityButton.Text = "Change a City";
+            this.ChangeCityButton.UseVisualStyleBackColor = true;
+            this.ChangeCityButton.Click += new System.EventHandler(this.ChangeCityButton_Click);
+            // 
+            // NameOldText
+            // 
+            this.NameOldText.Location = new System.Drawing.Point(69, 25);
+            this.NameOldText.Name = "NameOldText";
+            this.NameOldText.Size = new System.Drawing.Size(120, 20);
+            this.NameOldText.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Name";
+            // 
+            // PopChangeText
+            // 
+            this.PopChangeText.Location = new System.Drawing.Point(69, 83);
+            this.PopChangeText.Name = "PopChangeText";
+            this.PopChangeText.Size = new System.Drawing.Size(120, 20);
+            this.PopChangeText.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Population";
+            // 
+            // NewNameText
+            // 
+            this.NewNameText.Location = new System.Drawing.Point(69, 53);
+            this.NewNameText.Name = "NewNameText";
+            this.NewNameText.Size = new System.Drawing.Size(120, 20);
+            this.NewNameText.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "New Name";
+            // 
+            // ChangeGroup
+            // 
+            this.ChangeGroup.Controls.Add(this.label6);
+            this.ChangeGroup.Controls.Add(this.NewNameText);
+            this.ChangeGroup.Controls.Add(this.label3);
+            this.ChangeGroup.Controls.Add(this.PopChangeText);
+            this.ChangeGroup.Controls.Add(this.label4);
+            this.ChangeGroup.Controls.Add(this.NameOldText);
+            this.ChangeGroup.Controls.Add(this.ChangeCityButton);
+            this.ChangeGroup.Location = new System.Drawing.Point(563, 129);
+            this.ChangeGroup.Name = "ChangeGroup";
+            this.ChangeGroup.Size = new System.Drawing.Size(195, 141);
+            this.ChangeGroup.TabIndex = 4;
+            this.ChangeGroup.TabStop = false;
+            this.ChangeGroup.Text = "Change a City";
+            // 
+            // ShowCityButton
+            // 
+            this.ShowCityButton.Location = new System.Drawing.Point(99, 77);
+            this.ShowCityButton.Name = "ShowCityButton";
+            this.ShowCityButton.Size = new System.Drawing.Size(84, 26);
+            this.ShowCityButton.TabIndex = 7;
+            this.ShowCityButton.Text = "Show City";
+            this.ShowCityButton.UseVisualStyleBackColor = true;
+            this.ShowCityButton.Click += new System.EventHandler(this.ShowCityButton_Click);
+            // 
+            // CreateCityButton
+            // 
+            this.CreateCityButton.Location = new System.Drawing.Point(9, 77);
+            this.CreateCityButton.Name = "CreateCityButton";
+            this.CreateCityButton.Size = new System.Drawing.Size(84, 26);
+            this.CreateCityButton.TabIndex = 6;
+            this.CreateCityButton.Text = "Create City";
+            this.CreateCityButton.UseVisualStyleBackColor = true;
+            this.CreateCityButton.Click += new System.EventHandler(this.CreateCityButton_Click_1);
+            // 
             // Project3
             // 
-            this.ClientSize = new System.Drawing.Size(550, 369);
+            this.ClientSize = new System.Drawing.Size(787, 369);
+            this.Controls.Add(this.ChangeGroup);
+            this.Controls.Add(this.DeleteGroup);
+            this.Controls.Add(this.AddGroup);
             this.Controls.Add(this.StatsGroup);
             this.Controls.Add(this.SortGroup);
             this.Controls.Add(this.dataGridView2);
@@ -169,6 +375,12 @@
             this.SortGroup.ResumeLayout(false);
             this.StatsGroup.ResumeLayout(false);
             this.StatsGroup.PerformLayout();
+            this.AddGroup.ResumeLayout(false);
+            this.AddGroup.PerformLayout();
+            this.DeleteGroup.ResumeLayout(false);
+            this.DeleteGroup.PerformLayout();
+            this.ChangeGroup.ResumeLayout(false);
+            this.ChangeGroup.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -202,6 +414,25 @@
         private System.Windows.Forms.Button LowButton;
         private System.Windows.Forms.Button TotalButton;
         private System.Windows.Forms.Label AnsLabel;
+        private System.Windows.Forms.TextBox PopNameChangeText;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox PopAddText;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox AddGroup;
+        private System.Windows.Forms.TextBox NameDeleteText;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button DeleteCityButton;
+        private System.Windows.Forms.GroupBox DeleteGroup;
+        private System.Windows.Forms.Button ChangeCityButton;
+        private System.Windows.Forms.TextBox NameOldText;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox PopChangeText;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox NewNameText;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox ChangeGroup;
+        private System.Windows.Forms.Button ShowCityButton;
+        private System.Windows.Forms.Button CreateCityButton;
     }
 }
 

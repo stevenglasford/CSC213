@@ -82,5 +82,105 @@ namespace Assignment2
         {
             AnsLabel.Text = "Answer: " + dbcon.Cities.Max(c => c.Population).ToString();
         }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreateCityButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShowCityButton_Click(object sender, EventArgs e)
+        {
+            //find the city to show
+            var result = from x in dbcon.Cities.Local
+                         where x.CityName == PopNameChangeText.Text.ToString()
+                         orderby x.CityName
+                         select x;
+            //show data in the gridview
+            dataGridView2.DataSource = result.ToList();
+        }
+
+        private void CreateCityButton_Click_1(object sender, EventArgs e)
+        {
+            City myCity = new City();
+            myCity.CityName = PopNameChangeText.Text;
+            myCity.Population = Convert.ToInt32(PopAddText.Text);
+
+            //add the data to the table
+            dbcon.Cities.Add(myCity);
+            dbcon.SaveChanges();
+
+            //show the new data in the gridview
+            ShowData();
+        }
+
+        private void ShowData()
+        {
+            //Add data to the dbcon
+            dbcon.Cities.Load();
+
+            var result = from x in dbcon.Cities.Local
+                         orderby x.CityName
+                         select x;
+
+            //show data in the gridview
+            dataGridView2.DataSource = result.ToList();
+        }
+
+        private void DeleteCityButton_Click(object sender, EventArgs e)
+        {
+            //add data ti tge dbcon
+            dbcon.Cities.Load();
+
+            //find the city
+            City result = (from x in dbcon.Cities.Local
+                           where x.CityName == NameDeleteText.Text
+                           orderby x.CityName
+                           select x).First();
+
+            //delete object/row from the table
+            dbcon.Cities.Remove(result);
+            //save the changes of the table
+            dbcon.SaveChanges();
+
+            //show the data 
+            ShowData();
+        }
+
+        private void ChangeCityButton_Click(object sender, EventArgs e)
+        {
+            //add data to the dbcon
+            dbcon.Cities.Load();
+
+            City result = (from x in dbcon.Cities.Local
+                           where x.CityName == NameOldText.Text
+                           orderby x.CityName
+                           select x).First();
+
+
+            City myCity = new City();
+            myCity.CityName = NewNameText.Text;
+            myCity.Population = Convert.ToInt32(PopChangeText.Text);
+
+            //remove the old city
+            dbcon.Cities.Remove(result);
+            //add the update of the city
+            dbcon.Cities.Add(myCity);
+
+            //save the changes of the table
+            dbcon.SaveChanges();
+
+            //show the new data in the gridview
+            ShowData();
+        }
     }
 }

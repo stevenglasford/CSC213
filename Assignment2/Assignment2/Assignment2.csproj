@@ -89,6 +89,15 @@
       <DependentUpon>CityModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="Project4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project4.Designer.cs">
+      <DependentUpon>Project4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopulationDBDataSet.cs">
+      <DependentUpon>PopulationDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PopulationDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,6 +116,9 @@
     <Compile Include="RetailItem.cs" />
     <EmbeddedResource Include="Project3.resx">
       <DependentUpon>Project3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project4.resx">
+      <DependentUpon>Project4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
