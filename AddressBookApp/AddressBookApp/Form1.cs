@@ -74,5 +74,35 @@ namespace AddressBookApp
             ShowData();
 
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            //Add data to the dbcon
+            dbcon.Addresses.Load();
+
+            var result = from x in dbcon.Addresses.Local
+                         where x.AddressID==Convert.ToInt32(textBox6.Text)
+                         orderby x.LastName
+                         select x;
+
+            //show data in the gridview
+            dataGridView1.DataSource = result.ToList();
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            //Add data to the dbcon
+            dbcon.Addresses.Load();
+
+            Address result = (from x in dbcon.Addresses.Local
+                              where x.AddressID == Convert.ToInt32(textBox6.Text)
+                              orderby x.LastName
+                              select x).First();
+
+            //Delete object/row from the table
+            dbcon.Addresses.Remove(result);
+            //show the new table
+            ShowData();
+        }
     }
 }
