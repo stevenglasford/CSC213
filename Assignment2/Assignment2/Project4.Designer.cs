@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ChangeGroup1 = new System.Windows.Forms.GroupBox();
             this.label61 = new System.Windows.Forms.Label();
             this.NewNameText1 = new System.Windows.Forms.TextBox();
@@ -58,12 +59,16 @@
             this.PopAscendingButton1 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.ShowCityButton1 = new System.Windows.Forms.Button();
+            this.populationDBDataSet = new Assignment2.PopulationDBDataSet();
+            this.populationDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ChangeGroup1.SuspendLayout();
             this.DeleteGroup1.SuspendLayout();
             this.AddGroup1.SuspendLayout();
             this.StatsGroup1.SuspendLayout();
             this.SortGroup1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.populationDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.populationDBDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ChangeGroup1
@@ -292,6 +297,7 @@
             this.AvgButton1.TabIndex = 0;
             this.AvgButton1.Text = "Average Population";
             this.AvgButton1.UseVisualStyleBackColor = true;
+            this.AvgButton1.Click += new System.EventHandler(this.AvgButton1_Click);
             // 
             // SortGroup1
             // 
@@ -334,11 +340,14 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.DataSource = this.populationDBDataSetBindingSource;
             this.dataGridView3.Location = new System.Drawing.Point(7, 12);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(284, 345);
             this.dataGridView3.TabIndex = 5;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellContentClick);
             // 
             // ShowCityButton1
             // 
@@ -348,6 +357,16 @@
             this.ShowCityButton1.TabIndex = 5;
             this.ShowCityButton1.Text = "Show City";
             this.ShowCityButton1.UseVisualStyleBackColor = true;
+            // 
+            // populationDBDataSet
+            // 
+            this.populationDBDataSet.DataSetName = "PopulationDBDataSet";
+            this.populationDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // populationDBDataSetBindingSource
+            // 
+            this.populationDBDataSetBindingSource.DataSource = this.populationDBDataSet;
+            this.populationDBDataSetBindingSource.Position = 0;
             // 
             // Project4
             // 
@@ -362,6 +381,7 @@
             this.Controls.Add(this.dataGridView3);
             this.Name = "Project4";
             this.Text = "Project 4";
+            this.Load += new System.EventHandler(this.Project4_Load);
             this.ChangeGroup1.ResumeLayout(false);
             this.ChangeGroup1.PerformLayout();
             this.DeleteGroup1.ResumeLayout(false);
@@ -372,6 +392,8 @@
             this.StatsGroup1.PerformLayout();
             this.SortGroup1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.populationDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.populationDBDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -408,5 +430,7 @@
         private System.Windows.Forms.Button PopAscendingButton1;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Button ShowCityButton1;
+        private System.Windows.Forms.BindingSource populationDBDataSetBindingSource;
+        private PopulationDBDataSet populationDBDataSet;
     }
 }

@@ -25,5 +25,20 @@ namespace Assignment2
         private void AddGroup1_Enter(object sender, EventArgs e)
         {
         }
+
+        private void AvgButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Project4_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void DataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
