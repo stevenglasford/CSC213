@@ -44,5 +44,9 @@ namespace Assignment2
             }
         }
 
+        public override string ToString()
+        {
+            return base.ToString() + ";\tAmount Spent: " + Amount + ";\tDiscount: " + Discount;
+        }
     }
 }

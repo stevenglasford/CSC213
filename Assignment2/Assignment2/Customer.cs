@@ -17,5 +17,11 @@ namespace Assignment2
             CustNum = custN;
             MailList = mail;
         }
+
+        public override string ToString()
+        {
+            return  base.ToString() + "\tCustNum: " + CustNum + ";\tMailList: " 
+                + MailList;
+        } 
     }
 }

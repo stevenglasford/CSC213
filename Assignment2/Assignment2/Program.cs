@@ -32,9 +32,11 @@ namespace Assignment2
             Customer myCustomer = new Customer("Poop",
                 "420 Smoking Drive", "6969696969", 13, true);
 
+            Console.WriteLine(myCustomer.ToString());
+
             PreferredCustomer myPref = new PreferredCustomer
                 ("Paul Sak", "69 Anal place", "4206942069", 14, false, 1069m);
-            Console.WriteLine("Discount Rate : " + myPref.Discount);
+            Console.WriteLine(myPref.ToString());
         }
     }
 }

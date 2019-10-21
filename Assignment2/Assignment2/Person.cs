@@ -19,5 +19,11 @@ namespace Assignment2
             Address = addr;
             Telephone = tele;
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + "\nName: " + Name + ";\tAddress: " 
+                + Address + ";\tTelephone: " + Telephone;
+        }
     }
 }
