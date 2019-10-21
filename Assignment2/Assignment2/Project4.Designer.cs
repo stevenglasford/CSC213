@@ -42,6 +42,7 @@
             this.label51 = new System.Windows.Forms.Label();
             this.NameDeleteText1 = new System.Windows.Forms.TextBox();
             this.AddGroup1 = new System.Windows.Forms.GroupBox();
+            this.ShowCityButton1 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.PopAddText1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -57,16 +58,21 @@
             this.PopNameButton1 = new System.Windows.Forms.Button();
             this.PopDescendingButton1 = new System.Windows.Forms.Button();
             this.PopAscendingButton1 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.ShowCityButton1 = new System.Windows.Forms.Button();
+            this.cityDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.populationDBDataSet = new Assignment2.PopulationDBDataSet();
             this.populationDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cityTableAdapter = new Assignment2.PopulationDBDataSetTableAdapters.CityTableAdapter();
+            this.tableAdapterManager = new Assignment2.PopulationDBDataSetTableAdapters.TableAdapterManager();
             this.ChangeGroup1.SuspendLayout();
             this.DeleteGroup1.SuspendLayout();
             this.AddGroup1.SuspendLayout();
             this.StatsGroup1.SuspendLayout();
             this.SortGroup1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.populationDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.populationDBDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +86,7 @@
             this.ChangeGroup1.Controls.Add(this.label41);
             this.ChangeGroup1.Controls.Add(this.NameOldText1);
             this.ChangeGroup1.Controls.Add(this.ChangeCityButton1);
-            this.ChangeGroup1.Location = new System.Drawing.Point(558, 129);
+            this.ChangeGroup1.Location = new System.Drawing.Point(508, 129);
             this.ChangeGroup1.Name = "ChangeGroup1";
             this.ChangeGroup1.Size = new System.Drawing.Size(195, 141);
             this.ChangeGroup1.TabIndex = 9;
@@ -144,13 +150,14 @@
             this.ChangeCityButton1.TabIndex = 0;
             this.ChangeCityButton1.Text = "Change a City";
             this.ChangeCityButton1.UseVisualStyleBackColor = true;
+            this.ChangeCityButton1.Click += new System.EventHandler(this.ChangeCityButton1_Click);
             // 
             // DeleteGroup1
             // 
             this.DeleteGroup1.Controls.Add(this.DeleteCityButton1);
             this.DeleteGroup1.Controls.Add(this.label51);
             this.DeleteGroup1.Controls.Add(this.NameDeleteText1);
-            this.DeleteGroup1.Location = new System.Drawing.Point(558, 276);
+            this.DeleteGroup1.Location = new System.Drawing.Point(508, 276);
             this.DeleteGroup1.Name = "DeleteGroup1";
             this.DeleteGroup1.Size = new System.Drawing.Size(195, 81);
             this.DeleteGroup1.TabIndex = 10;
@@ -165,6 +172,7 @@
             this.DeleteCityButton1.TabIndex = 2;
             this.DeleteCityButton1.Text = "Delete a City";
             this.DeleteCityButton1.UseVisualStyleBackColor = true;
+            this.DeleteCityButton1.Click += new System.EventHandler(this.DeleteCityButton1_Click);
             // 
             // label51
             // 
@@ -190,13 +198,23 @@
             this.AddGroup1.Controls.Add(this.label11);
             this.AddGroup1.Controls.Add(this.PopNameChangeText1);
             this.AddGroup1.Controls.Add(this.CreateCityButton1);
-            this.AddGroup1.Location = new System.Drawing.Point(558, 12);
+            this.AddGroup1.Location = new System.Drawing.Point(508, 12);
             this.AddGroup1.Name = "AddGroup1";
             this.AddGroup1.Size = new System.Drawing.Size(195, 109);
             this.AddGroup1.TabIndex = 8;
             this.AddGroup1.TabStop = false;
             this.AddGroup1.Text = "Add a City";
             this.AddGroup1.Enter += new System.EventHandler(this.AddGroup1_Enter);
+            // 
+            // ShowCityButton1
+            // 
+            this.ShowCityButton1.Location = new System.Drawing.Point(99, 77);
+            this.ShowCityButton1.Name = "ShowCityButton1";
+            this.ShowCityButton1.Size = new System.Drawing.Size(84, 26);
+            this.ShowCityButton1.TabIndex = 5;
+            this.ShowCityButton1.Text = "Show City";
+            this.ShowCityButton1.UseVisualStyleBackColor = true;
+            this.ShowCityButton1.Click += new System.EventHandler(this.ShowCityButton1_Click);
             // 
             // label21
             // 
@@ -238,6 +256,7 @@
             this.CreateCityButton1.TabIndex = 0;
             this.CreateCityButton1.Text = "Create City";
             this.CreateCityButton1.UseVisualStyleBackColor = true;
+            this.CreateCityButton1.Click += new System.EventHandler(this.CreateCityButton1_Click);
             // 
             // StatsGroup1
             // 
@@ -246,7 +265,7 @@
             this.StatsGroup1.Controls.Add(this.LowButton1);
             this.StatsGroup1.Controls.Add(this.TotalButton1);
             this.StatsGroup1.Controls.Add(this.AvgButton1);
-            this.StatsGroup1.Location = new System.Drawing.Point(319, 127);
+            this.StatsGroup1.Location = new System.Drawing.Point(269, 127);
             this.StatsGroup1.Name = "StatsGroup1";
             this.StatsGroup1.Size = new System.Drawing.Size(215, 230);
             this.StatsGroup1.TabIndex = 7;
@@ -256,7 +275,7 @@
             // AnsLabel1
             // 
             this.AnsLabel1.AutoSize = true;
-            this.AnsLabel1.Location = new System.Drawing.Point(27, 176);
+            this.AnsLabel1.Location = new System.Drawing.Point(14, 181);
             this.AnsLabel1.Name = "AnsLabel1";
             this.AnsLabel1.Size = new System.Drawing.Size(48, 13);
             this.AnsLabel1.TabIndex = 4;
@@ -270,6 +289,7 @@
             this.HighButton1.TabIndex = 3;
             this.HighButton1.Text = "Highest Population";
             this.HighButton1.UseVisualStyleBackColor = true;
+            this.HighButton1.Click += new System.EventHandler(this.HighButton1_Click);
             // 
             // LowButton1
             // 
@@ -279,6 +299,7 @@
             this.LowButton1.TabIndex = 2;
             this.LowButton1.Text = "Lowest Population";
             this.LowButton1.UseVisualStyleBackColor = true;
+            this.LowButton1.Click += new System.EventHandler(this.LowButton1_Click);
             // 
             // TotalButton1
             // 
@@ -288,6 +309,7 @@
             this.TotalButton1.TabIndex = 1;
             this.TotalButton1.Text = "Total Population";
             this.TotalButton1.UseVisualStyleBackColor = true;
+            this.TotalButton1.Click += new System.EventHandler(this.TotalButton1_Click);
             // 
             // AvgButton1
             // 
@@ -304,7 +326,7 @@
             this.SortGroup1.Controls.Add(this.PopNameButton1);
             this.SortGroup1.Controls.Add(this.PopDescendingButton1);
             this.SortGroup1.Controls.Add(this.PopAscendingButton1);
-            this.SortGroup1.Location = new System.Drawing.Point(320, 12);
+            this.SortGroup1.Location = new System.Drawing.Point(270, 12);
             this.SortGroup1.Name = "SortGroup1";
             this.SortGroup1.Size = new System.Drawing.Size(210, 109);
             this.SortGroup1.TabIndex = 6;
@@ -313,50 +335,63 @@
             // 
             // PopNameButton1
             // 
-            this.PopNameButton1.Location = new System.Drawing.Point(16, 72);
+            this.PopNameButton1.Location = new System.Drawing.Point(16, 77);
             this.PopNameButton1.Name = "PopNameButton1";
             this.PopNameButton1.Size = new System.Drawing.Size(188, 22);
             this.PopNameButton1.TabIndex = 2;
             this.PopNameButton1.Text = "Population Name";
             this.PopNameButton1.UseVisualStyleBackColor = true;
+            this.PopNameButton1.Click += new System.EventHandler(this.PopNameButton1_Click);
             // 
             // PopDescendingButton1
             // 
-            this.PopDescendingButton1.Location = new System.Drawing.Point(16, 44);
+            this.PopDescendingButton1.Location = new System.Drawing.Point(16, 49);
             this.PopDescendingButton1.Name = "PopDescendingButton1";
             this.PopDescendingButton1.Size = new System.Drawing.Size(188, 22);
             this.PopDescendingButton1.TabIndex = 1;
             this.PopDescendingButton1.Text = "Population Descending";
             this.PopDescendingButton1.UseVisualStyleBackColor = true;
+            this.PopDescendingButton1.Click += new System.EventHandler(this.PopDescendingButton1_Click);
             // 
             // PopAscendingButton1
             // 
-            this.PopAscendingButton1.Location = new System.Drawing.Point(15, 16);
+            this.PopAscendingButton1.Location = new System.Drawing.Point(16, 21);
             this.PopAscendingButton1.Name = "PopAscendingButton1";
             this.PopAscendingButton1.Size = new System.Drawing.Size(188, 22);
             this.PopAscendingButton1.TabIndex = 0;
             this.PopAscendingButton1.Text = "Population Ascending";
             this.PopAscendingButton1.UseVisualStyleBackColor = true;
+            this.PopAscendingButton1.Click += new System.EventHandler(this.PopAscendingButton1_Click);
             // 
-            // dataGridView3
+            // cityDataGridView
             // 
-            this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.DataSource = this.populationDBDataSetBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(7, 12);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(284, 345);
-            this.dataGridView3.TabIndex = 5;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellContentClick);
+            this.cityDataGridView.AutoGenerateColumns = false;
+            this.cityDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cityDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.cityDataGridView.DataSource = this.cityBindingSource;
+            this.cityDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.cityDataGridView.Name = "cityDataGridView";
+            this.cityDataGridView.Size = new System.Drawing.Size(252, 345);
+            this.cityDataGridView.TabIndex = 10;
             // 
-            // ShowCityButton1
+            // dataGridViewTextBoxColumn1
             // 
-            this.ShowCityButton1.Location = new System.Drawing.Point(99, 77);
-            this.ShowCityButton1.Name = "ShowCityButton1";
-            this.ShowCityButton1.Size = new System.Drawing.Size(84, 26);
-            this.ShowCityButton1.TabIndex = 5;
-            this.ShowCityButton1.Text = "Show City";
-            this.ShowCityButton1.UseVisualStyleBackColor = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "City";
+            this.dataGridViewTextBoxColumn1.HeaderText = "City";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Population";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Population";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // cityBindingSource
+            // 
+            this.cityBindingSource.DataMember = "City";
+            this.cityBindingSource.DataSource = this.populationDBDataSet;
             // 
             // populationDBDataSet
             // 
@@ -368,17 +403,27 @@
             this.populationDBDataSetBindingSource.DataSource = this.populationDBDataSet;
             this.populationDBDataSetBindingSource.Position = 0;
             // 
+            // cityTableAdapter
+            // 
+            this.cityTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CityTableAdapter = this.cityTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Assignment2.PopulationDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Project4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 365);
+            this.ClientSize = new System.Drawing.Size(714, 363);
+            this.Controls.Add(this.cityDataGridView);
             this.Controls.Add(this.ChangeGroup1);
             this.Controls.Add(this.DeleteGroup1);
             this.Controls.Add(this.AddGroup1);
             this.Controls.Add(this.StatsGroup1);
             this.Controls.Add(this.SortGroup1);
-            this.Controls.Add(this.dataGridView3);
             this.Name = "Project4";
             this.Text = "Project 4";
             this.Load += new System.EventHandler(this.Project4_Load);
@@ -391,7 +436,8 @@
             this.StatsGroup1.ResumeLayout(false);
             this.StatsGroup1.PerformLayout();
             this.SortGroup1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.populationDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.populationDBDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -428,9 +474,14 @@
         private System.Windows.Forms.Button PopNameButton1;
         private System.Windows.Forms.Button PopDescendingButton1;
         private System.Windows.Forms.Button PopAscendingButton1;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Button ShowCityButton1;
         private System.Windows.Forms.BindingSource populationDBDataSetBindingSource;
         private PopulationDBDataSet populationDBDataSet;
+        private System.Windows.Forms.BindingSource cityBindingSource;
+        private PopulationDBDataSetTableAdapters.CityTableAdapter cityTableAdapter;
+        private PopulationDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView cityDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }

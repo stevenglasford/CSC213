@@ -16,7 +16,10 @@ namespace Assignment2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Run Project 3
             Application.Run(new Project3());
+            //Run Project 4
+            Application.Run(new Project4());
 
             //added stuff to the array thing
             RetailItem[] stuff = new RetailItem[3];

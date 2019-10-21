@@ -34,16 +34,18 @@
             this.PopDescendingButton = new System.Windows.Forms.Button();
             this.PopAscendingButton = new System.Windows.Forms.Button();
             this.StatsGroup = new System.Windows.Forms.GroupBox();
+            this.AnsLabel = new System.Windows.Forms.Label();
             this.HighButton = new System.Windows.Forms.Button();
             this.LowButton = new System.Windows.Forms.Button();
             this.TotalButton = new System.Windows.Forms.Button();
             this.AvgButton = new System.Windows.Forms.Button();
-            this.AnsLabel = new System.Windows.Forms.Label();
             this.PopNameChangeText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PopAddText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.AddGroup = new System.Windows.Forms.GroupBox();
+            this.ShowCityButton = new System.Windows.Forms.Button();
+            this.CreateCityButton = new System.Windows.Forms.Button();
             this.NameDeleteText = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.DeleteCityButton = new System.Windows.Forms.Button();
@@ -56,8 +58,6 @@
             this.NewNameText = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.ChangeGroup = new System.Windows.Forms.GroupBox();
-            this.ShowCityButton = new System.Windows.Forms.Button();
-            this.CreateCityButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SortGroup.SuspendLayout();
             this.StatsGroup.SuspendLayout();
@@ -130,6 +130,15 @@
             this.StatsGroup.TabStop = false;
             this.StatsGroup.Text = "Statistics";
             // 
+            // AnsLabel
+            // 
+            this.AnsLabel.AutoSize = true;
+            this.AnsLabel.Location = new System.Drawing.Point(27, 176);
+            this.AnsLabel.Name = "AnsLabel";
+            this.AnsLabel.Size = new System.Drawing.Size(48, 13);
+            this.AnsLabel.TabIndex = 4;
+            this.AnsLabel.Text = "Answer: ";
+            // 
             // HighButton
             // 
             this.HighButton.Location = new System.Drawing.Point(16, 130);
@@ -169,15 +178,6 @@
             this.AvgButton.Text = "Average Population";
             this.AvgButton.UseVisualStyleBackColor = true;
             this.AvgButton.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // AnsLabel
-            // 
-            this.AnsLabel.AutoSize = true;
-            this.AnsLabel.Location = new System.Drawing.Point(27, 176);
-            this.AnsLabel.Name = "AnsLabel";
-            this.AnsLabel.Size = new System.Drawing.Size(48, 13);
-            this.AnsLabel.TabIndex = 4;
-            this.AnsLabel.Text = "Answer: ";
             // 
             // PopNameChangeText
             // 
@@ -227,6 +227,26 @@
             this.AddGroup.TabIndex = 3;
             this.AddGroup.TabStop = false;
             this.AddGroup.Text = "Add a City";
+            // 
+            // ShowCityButton
+            // 
+            this.ShowCityButton.Location = new System.Drawing.Point(99, 77);
+            this.ShowCityButton.Name = "ShowCityButton";
+            this.ShowCityButton.Size = new System.Drawing.Size(84, 26);
+            this.ShowCityButton.TabIndex = 7;
+            this.ShowCityButton.Text = "Show City";
+            this.ShowCityButton.UseVisualStyleBackColor = true;
+            this.ShowCityButton.Click += new System.EventHandler(this.ShowCityButton_Click);
+            // 
+            // CreateCityButton
+            // 
+            this.CreateCityButton.Location = new System.Drawing.Point(9, 77);
+            this.CreateCityButton.Name = "CreateCityButton";
+            this.CreateCityButton.Size = new System.Drawing.Size(84, 26);
+            this.CreateCityButton.TabIndex = 6;
+            this.CreateCityButton.Text = "Create City";
+            this.CreateCityButton.UseVisualStyleBackColor = true;
+            this.CreateCityButton.Click += new System.EventHandler(this.CreateCityButton_Click_1);
             // 
             // NameDeleteText
             // 
@@ -340,26 +360,6 @@
             this.ChangeGroup.TabStop = false;
             this.ChangeGroup.Text = "Change a City";
             // 
-            // ShowCityButton
-            // 
-            this.ShowCityButton.Location = new System.Drawing.Point(99, 77);
-            this.ShowCityButton.Name = "ShowCityButton";
-            this.ShowCityButton.Size = new System.Drawing.Size(84, 26);
-            this.ShowCityButton.TabIndex = 7;
-            this.ShowCityButton.Text = "Show City";
-            this.ShowCityButton.UseVisualStyleBackColor = true;
-            this.ShowCityButton.Click += new System.EventHandler(this.ShowCityButton_Click);
-            // 
-            // CreateCityButton
-            // 
-            this.CreateCityButton.Location = new System.Drawing.Point(9, 77);
-            this.CreateCityButton.Name = "CreateCityButton";
-            this.CreateCityButton.Size = new System.Drawing.Size(84, 26);
-            this.CreateCityButton.TabIndex = 6;
-            this.CreateCityButton.Text = "Create City";
-            this.CreateCityButton.UseVisualStyleBackColor = true;
-            this.CreateCityButton.Click += new System.EventHandler(this.CreateCityButton_Click_1);
-            // 
             // Project3
             // 
             this.ClientSize = new System.Drawing.Size(787, 369);
@@ -370,6 +370,7 @@
             this.Controls.Add(this.SortGroup);
             this.Controls.Add(this.dataGridView2);
             this.Name = "Project3";
+            this.Text = "Project 3";
             this.Load += new System.EventHandler(this.Project3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.SortGroup.ResumeLayout(false);
