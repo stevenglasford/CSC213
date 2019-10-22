@@ -1,9 +1,0 @@
-C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\TimeApp\TimeApp\bin\Debug\TimeApp.exe.config
-C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\TimeApp\TimeApp\bin\Debug\TimeApp.exe
-C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\TimeApp\TimeApp\bin\Debug\TimeApp.pdb
-C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\TimeApp\TimeApp\obj\Debug\TimeApp.csprojAssemblyReference.cache
-C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\TimeApp\TimeApp\obj\Debug\TimeApp.Properties.Resources.resources
-C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\TimeApp\TimeApp\obj\Debug\TimeApp.csproj.GenerateResource.cache
-C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\TimeApp\TimeApp\obj\Debug\TimeApp.csproj.CoreCompileInputs.cache
-C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\TimeApp\TimeApp\obj\Debug\TimeApp.exe
-C:\Users\steven.glasford.AD.000.001.002\OneDrive - North Dakota University System\TimeApp\TimeApp\obj\Debug\TimeApp.pdb
