@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Halloween.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: 100pt;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <span class="auto-style1">NDSU</span><br />
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/homepage.aspx">Home</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/mywork/studentpage.aspx">Students</asp:HyperLink>
+&nbsp;<div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        FFFFFFFFFFFFFFFFFFFFFFFFFF
+    </form>
+</body>
+</html>
